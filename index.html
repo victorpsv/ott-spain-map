@@ -57,7 +57,7 @@
     line-height: 1.25;
     color: #fff;
     margin-bottom: 12px;
-    max-width: 560px;
+    max-width: 900px;
     position: relative;
     z-index: 1;
   }
@@ -65,7 +65,7 @@
     font-size: 15px;
     color: #c0bef4;
     line-height: 1.65;
-    max-width: 580px;
+    max-width: 950px;
     margin-bottom: 24px;
     position: relative;
     z-index: 1;
@@ -247,6 +247,12 @@
     align-items: center;
     gap: 8px;
   }
+  .card h3 .badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 400;
+  }
   .card p, .card li {
     font-size: 13px;
     color: #5f5e5a;
@@ -324,6 +330,29 @@
   .tech-info a { color: #3C3489; text-decoration: none; }
   .tech-info a:hover { text-decoration: underline; }
 
+  .sources-card {
+    margin-top: 12px;
+  }
+  .sources-card h3 {
+    margin-bottom: 10px;
+  }
+  .source-list {
+    padding-left: 18px;
+  }
+  .source-list li {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #5f5e5a;
+    margin-bottom: 4px;
+  }
+  .source-list a {
+    color: #3C3489;
+    text-decoration: none;
+  }
+  .source-list a:hover {
+    text-decoration: underline;
+  }
+
   /* ── SECTION LABEL ── */
   .section-label {
     font-size: 11px;
@@ -383,9 +412,9 @@
 <!-- ── HERO SECTION ── -->
 <div class="hero">
   <div class="hero-tag">Strategic framework · Spain · 2025</div>
-  <h1>Launching a new OTT streaming platform in Spain</h1>
+  <h1>Interactive concept map - OTT platform strategy for Spain</h1>
   <p class="hero-lead">
-    Spain's streaming market is maturing fast — but there is still a significant gap at the premium local end. While Mediaset Infinity and AtresPlayer anchor the free-to-air digital space, no platform has yet claimed the role of Spain's go-to premium local streaming destination. With ~48M people, 90% broadband penetration, and audiences underserved in regional languages and niche sports, the opportunity is real — but so is the complexity. This framework maps the 6 key dimensions you need to get right.
+    Spain’s streaming market is maturing fast, yet key gaps remain — particularly in premium local content. Platforms like Mediaset Infinity and AtresPlayer anchor the free-to-air digital space, while global players dominate subscription streaming, leaving room for further innovation in premium local streaming experiences. With ~48M people, high broadband penetration, and audiences underserved in regional languages and niche sports, the opportunity is clear — but execution is complex. This interactive concept map explores the 6 strategic dimensions required to design, build, and scale an OTT platform in Spain.
   </p>
   <div class="stats-row">
     <div class="stat">
@@ -415,15 +444,15 @@
 <div class="insights-strip">
   <div class="insight">
     <div class="insight-dot" style="background:#534AB7"></div>
-    <p><strong>No local champion.</strong> Global giants under-invest in Spanish & regional originals — the biggest whitespace in the market.</p>
+    <p><strong>Technology is no longer a differentiator — execution is.</strong> Playback quality, app performance, and reliability now directly impact retention and churn.</p>
   </div>
   <div class="insight">
     <div class="insight-dot" style="background:#1D9E75"></div>
-    <p><strong>Bizum is non-negotiable.</strong> Spain's dominant mobile payment (25M+ users) is ignored by most international OTTs — a conversion mistake.</p>
+    <p><strong>Payments must fit the model.</strong> Payment flexibility is a key conversion lever in OTT. Subscriptions typically rely on card-on-file and digital wallets, while local methods like Bizum are better suited to one-off purchases.</p>
   </div>
   <div class="insight">
     <div class="insight-dot" style="background:#D85A30"></div>
-    <p><strong>Niche sports &gt; LaLiga.</strong> Padel and Liga F (women's football) offer passionate audiences at a fraction of the rights cost.</p>
+    <p><strong>Content is the #1 retention driver.</strong> Content quality and relevance drive subscribe, stay, and churn decisions more than price or UX. A new OTT must define its content identity before anything else.</p>
   </div>
   <div class="insight">
     <div class="insight-dot" style="background:#BA7517"></div>
@@ -548,6 +577,17 @@
   <div class="info-box">
     <strong>How to use this file:</strong> Use the tabs above to navigate each strategic dimension. The overview map shows how they connect — click any node to jump to that section. All content works offline.
   </div>
+
+  <div class="card sources-card">
+    <h3>Sources</h3>
+    <ul class="source-list">
+      <li><a href="https://www.ine.es/dyngs/Prensa/en/CensoVariables2025.htm" target="_blank" rel="noopener noreferrer">INE — Censo Anual de Población 2025</a></li>
+      <li><a href="https://www.cnmc.es/prensa/panel-hogares-audiovisual-20250609" target="_blank" rel="noopener noreferrer">CNMC — Panel de Hogares audiovisual (2025)</a></li>
+      <li><a href="https://data.cnmc.es/panel-hogares" target="_blank" rel="noopener noreferrer">CNMC Data — Panel de Hogares</a></li>
+      <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2022-11311" target="_blank" rel="noopener noreferrer">BOE — Ley 13/2022, General de Comunicación Audiovisual</a></li>
+    </ul>
+  </div>
+
 </div>
 
 <!-- ═══════════════════════════════════════════════════
@@ -606,6 +646,18 @@
       </ul>
     </div>
   </div>
+
+  <div class="card sources-card">
+    <h3>Sources</h3>
+    <ul class="source-list">
+      <li><a href="https://www.cultura.gob.es/cultura/areas/cine/inicio.html" target="_blank" rel="noopener noreferrer">ICAA / Ministerio de Cultura — cine y audiovisual</a></li>
+      <li><a href="https://www.ccma.cat/" target="_blank" rel="noopener noreferrer">3Cat / CCMA</a></li>
+      <li><a href="https://www.eitb.eus/" target="_blank" rel="noopener noreferrer">EITB</a></li>
+      <li><a href="https://www.crtvg.gal/" target="_blank" rel="noopener noreferrer">CRTVG</a></li>
+      <li><a href="https://www.cnmc.es/prensa/panel-hogares-audiovisual-20250609" target="_blank" rel="noopener noreferrer">CNMC — audiovisual platform usage in Spain</a></li>
+    </ul>
+  </div>
+
 </div>
 
 <!-- ═══════════════════════════════════════════════════
@@ -670,6 +722,16 @@
       </ul>
     </div>
   </div>
+
+  <div class="card sources-card">
+    <h3>Sources</h3>
+    <ul class="source-list">
+      <li><a href="https://www.ine.es/dyngs/Prensa/en/CensoVariables2025.htm" target="_blank" rel="noopener noreferrer">INE — population data</a></li>
+      <li><a href="https://www.cnmc.es/prensa/panel-hogares-audiovisual-20250609" target="_blank" rel="noopener noreferrer">CNMC — Panel de Hogares audiovisual (2025)</a></li>
+      <li><a href="https://data.cnmc.es/panel-de-hogares/conjuntos-de-datos/estadisticas-panel-de-hogares" target="_blank" rel="noopener noreferrer">CNMC Data — household panel statistics</a></li>
+    </ul>
+  </div>
+
 </div>
 
 <!-- ═══════════════════════════════════════════════════
@@ -776,6 +838,17 @@
       <span class="tag rec">Premium local originals gap</span>
     </div>
   </div>
+
+  <div class="card sources-card">
+    <h3>Sources</h3>
+    <ul class="source-list">
+      <li><a href="https://www.mediasetinfinity.es/" target="_blank" rel="noopener noreferrer">Mediaset Infinity — official platform site</a></li>
+      <li><a href="https://www.mediasetinfinity.es/fight-sports" target="_blank" rel="noopener noreferrer">Mediaset Infinity — Fight Sports</a></li>
+      <li><a href="https://www.atresmediacorporacion.com/documents/2025/07/23/AF04A50D-5664-4197-A0D6-9C592B0C7A76/atresmediah125results.pdf" target="_blank" rel="noopener noreferrer">Atresmedia — H1 2025 results</a></li>
+      <li><a href="https://www.cnmc.es/prensa/panel-hogares-audiovisual-20250609" target="_blank" rel="noopener noreferrer">CNMC — paid audiovisual platform usage</a></li>
+    </ul>
+  </div>
+
 </div>
 
 <!-- ═══════════════════════════════════════════════════
@@ -934,6 +1007,18 @@
       <p style="margin-top:10px;"><span class="tag rec">Recommendation: AWS eu-south-2 for data + EKS + Terraform from day one</span></p>
     </div>
   </div>
+
+  <div class="card sources-card">
+    <h3>Sources</h3>
+    <ul class="source-list">
+      <li><a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer">Next.js documentation</a></li>
+      <li><a href="https://shaka-player-demo.appspot.com/docs/api/index.html" target="_blank" rel="noopener noreferrer">Shaka Player documentation</a></li>
+      <li><a href="https://aws.amazon.com/blogs/aws/now-open-aws-region-in-spain/" target="_blank" rel="noopener noreferrer">AWS — Europe (Spain) region</a></li>
+      <li><a href="https://bitban.com/bcube/" target="_blank" rel="noopener noreferrer">Bitban — bCube</a></li>
+      <li><a href="https://docs.adyen.com/" target="_blank" rel="noopener noreferrer">Adyen documentation</a></li>
+    </ul>
+  </div>
+
 </div>
 
 <!-- ═══════════════════════════════════════════════════
@@ -987,6 +1072,17 @@
       </ul>
     </div>
   </div>
+
+  <div class="card sources-card">
+    <h3>Sources</h3>
+    <ul class="source-list">
+      <li><a href="https://www.cnmc.es/prensa/panel-hogares-audiovisual-20250609" target="_blank" rel="noopener noreferrer">CNMC — OTT household usage</a></li>
+      <li><a href="https://www.netflix.com/es/" target="_blank" rel="noopener noreferrer">Netflix Spain — current plans</a></li>
+      <li><a href="https://www.mediasetinfinity.es/todas-las-suscripciones" target="_blank" rel="noopener noreferrer">Mediaset Infinity — subscriptions</a></li>
+      <li><a href="https://www.movistarplus.es/" target="_blank" rel="noopener noreferrer">Movistar Plus+ — offers</a></li>
+    </ul>
+  </div>
+
 </div>
 
 <!-- ═══════════════════════════════════════════════════
@@ -1047,13 +1143,24 @@
       </ul>
     </div>
   </div>
+
+  <div class="card sources-card">
+    <h3>Sources</h3>
+    <ul class="source-list">
+      <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2022-11311" target="_blank" rel="noopener noreferrer">BOE — Ley 13/2022, General de Comunicación Audiovisual</a></li>
+      <li><a href="https://eur-lex.europa.eu/legal-content/ES/ALL/?uri=CELEX%3A32019L0882" target="_blank" rel="noopener noreferrer">EUR-Lex — European Accessibility Act</a></li>
+      <li><a href="https://accessible-eu-centre.ec.europa.eu/content-corner/news/eaa-comes-effect-june-2025-are-you-ready-2025-01-31_en" target="_blank" rel="noopener noreferrer">AccessibleEU — EAA applicability from June 2025</a></li>
+      <li><a href="https://www.aepd.es/guias/guia-cookies.pdf" target="_blank" rel="noopener noreferrer">AEPD — Guía sobre el uso de cookies</a></li>
+    </ul>
+  </div>
+
 </div>
 
 </div><!-- end content-wrap -->
 
 <div class="footer">
   <div class="footer-title">Launching an OTT platform in Spain — a 6-dimension strategy framework</div>
-  <p>Built as an interactive study guide. Share it with anyone exploring the Spanish streaming market.</p>
+  <p>Built by Victor Pedroso · Views are personal and based on public information</p>
   <div class="hashtags">
     <span class="hashtag">#OTT</span>
     <span class="hashtag">#StreamingStrategy</span>
@@ -1293,7 +1400,7 @@ const TECH_INFO = {
     title: 'Catalogue rights service',
     body: 'Important in OTT because availability depends on territory, device, dates, and deal terms. A dedicated rights layer reduces legal and merchandising errors.',
     links: [
-      ['AWS media solutions overview', 'https://aws.amazon.com/media/solutions/']
+      ['AWS entitlement architecture example', 'https://aws.amazon.com/media/solutions/']
     ]
   },
   personalize: {
