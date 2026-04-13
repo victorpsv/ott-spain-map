@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OTT Platform Spain — Strategy Map</title>
+<meta name="description" content="A complete strategic framework for launching a new OTT streaming platform in Spain: content, market, competition, technology, monetisation and regulation.">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f5f4f0;
+    color: #1a1a18;
+    min-height: 100vh;
+    padding: 0 0 3rem;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: #1a1855;
+    color: #fff;
+    padding: 3rem 2rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: rgba(127,119,221,0.18);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(29,158,117,0.12);
+  }
+  .hero-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.12);
+    color: #c5c3f0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #fff;
+    margin-bottom: 12px;
+    max-width: 560px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-lead {
+    font-size: 15px;
+    color: #c0bef4;
+    line-height: 1.65;
+    max-width: 580px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .stats-row {
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+  .stat {
+    padding: 12px 20px 12px 0;
+    margin-right: 20px;
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+  .stat:last-child { border-right: none; margin-right: 0; }
+  .stat-num {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-label {
+    font-size: 11px;
+    color: #a09edd;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ── KEY INSIGHTS strip ── */
+  .insights-strip {
+    background: #fff;
+    border-bottom: 1px solid #e8e6e0;
+    padding: 1.2rem 2rem;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .insight {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1;
+    min-width: 200px;
+  }
+  .insight-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+  .insight p {
+    font-size: 13px;
+    color: #3d3d3a;
+    line-height: 1.5;
+  }
+  .insight strong { color: #1a1a18; font-weight: 500; }
+
+  /* ── MAIN CONTENT AREA ── */
+  .content-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 0;
+  }
+
+  h1 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #1a1a18;
+  }
+  .subtitle {
+    font-size: 14px;
+    color: #5f5e5a;
+    margin-bottom: 2rem;
+  }
+
+  /* ── TAB NAV ── */
+  .tabs {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .tab {
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 20px;
+    border: 0.5px solid #c8c6bc;
+    background: #fff;
+    color: #5f5e5a;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .tab:hover { background: #eeedea; }
+  .tab.active {
+    background: #534AB7;
+    color: #EEEDFE;
+    border-color: #534AB7;
+  }
+
+  /* ── PROGRESS BAR ── */
+  .progress-bar {
+    height: 3px;
+    background: #e8e6e0;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: #534AB7;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+  }
+
+  /* ── PANELS ── */
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  /* ── CONCEPT MAP SVG ── */
+  .map-wrap {
+    background: #fff;
+    border-radius: 12px;
+    border: 0.5px solid #d3d1c7;
+    padding: 12px;
+    margin-bottom: 14px;
+  }
+  .map-wrap svg { display: block; width: 100%; }
+  .node-group { cursor: pointer; }
+  .node-group:hover rect, .node-group:hover circle { opacity: 0.82; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.78} }
+  .pulse { animation: pulse 2.2s ease-in-out infinite; }
+  .info-box {
+    background: #fff;
+    border-radius: 10px;
+    border: 0.5px solid #d3d1c7;
+    padding: 14px 18px;
+    font-size: 13px;
+    color: #5f5e5a;
+    line-height: 1.7;
+    min-height: 64px;
+    margin-bottom: 14px;
+  }
+  .info-box strong { color: #1a1a18; font-weight: 500; }
+  .legend {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #5f5e5a;
+    margin-bottom: 14px;
+  }
+  .leg { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+  /* ── DETAIL SECTIONS ── */
+  .detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    border: 0.5px solid #d3d1c7;
+    padding: 16px 18px;
+  }
+  .card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a18;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card h3 .badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 400;
+  }
+  .card p, .card li {
+    font-size: 13px;
+    color: #5f5e5a;
+    line-height: 1.65;
+  }
+  .card ul { padding-left: 16px; }
+  .card li { margin-bottom: 4px; }
+  .card .label { font-size: 11px; color: #888780; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; font-weight: 500; }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    border: 0.5px solid #c8c6bc;
+    color: #5f5e5a;
+    background: #f5f4f0;
+    margin: 2px 2px 2px 0;
+  }
+  .tag.rec { background: #E1F5EE; color: #085041; border-color: #9FE1CB; }
+  .tag.warn { background: #FAEEDA; color: #633806; border-color: #FAC775; }
+  .tag.key { background: #EEEDFE; color: #3C3489; border-color: #AFA9EC; }
+
+  /* ── TECH STACK ── */
+  .stack-layer {
+    background: #fff;
+    border-radius: 10px;
+    border: 0.5px solid #d3d1c7;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  .stack-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .stack-header:hover { background: #f5f4f0; }
+  .stack-header h3 { font-size: 14px; font-weight: 500; color: #1a1a18; }
+  .stack-header .sub { font-size: 12px; color: #888780; margin-left: auto; }
+  .stack-body { padding: 0 16px 14px; display: none; }
+  .stack-body.open { display: block; }
+  .stack-body p { font-size: 13px; color: #5f5e5a; line-height: 1.65; margin-bottom: 10px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 0.5px solid #c8c6bc;
+    color: #5f5e5a;
+    background: #f5f4f0;
+  }
+  .chip.hl { background: #E6F1FB; color: #0C447C; border-color: #85B7EB; }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #888780;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 18px 0 8px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 3rem;
+    background: #1a1855;
+    color: #a09edd;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  .footer .footer-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .footer p { font-size: 13px; line-height: 1.6; }
+  .footer .hashtags {
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .hashtag {
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    color: #c5c3f0;
+  }
+  .share-cta {
+    margin-top: 16px;
+    display: inline-block;
+    font-size: 13px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background: #534AB7;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+  }
+  .share-cta:hover { background: #6058c8; }
+</style>
+</head>
+<body>
+
+<!-- ── HERO SECTION ── -->
+<div class="hero">
+  <div class="hero-tag">Strategic framework · Spain · 2025</div>
+  <h1>Launching a new OTT streaming platform in Spain</h1>
+  <p class="hero-lead">
+    Spain's streaming market is maturing fast — but there is still a significant gap at the premium local end. While Mediaset Infinity and AtresPlayer anchor the free-to-air digital space, no platform has yet claimed the role of Spain's go-to premium local streaming destination. With ~49M people, 90% broadband penetration, and audiences underserved in regional languages and niche sports, the opportunity is real — but so is the complexity. This framework maps the 6 key dimensions you need to get right.
+  </p>
+  <div class="stats-row">
+    <div class="stat">
+      <div class="stat-num">~49M</div>
+      <div class="stat-label">Population</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">~60%</div>
+      <div class="stat-label">SVoD penetration</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">~70%</div>
+      <div class="stat-label">Viewing on TV screens</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">10M+</div>
+      <div class="stat-label">Regional language speakers</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">6</div>
+      <div class="stat-label">Strategic dimensions</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── KEY INSIGHTS STRIP ── -->
+<div class="insights-strip">
+  <div class="insight">
+    <div class="insight-dot" style="background:#534AB7"></div>
+    <p><strong>No dominant local premium leader.</strong> Global giants and local broadcasters still leave whitespace in premium Spanish and regional originals.</p>
+  </div>
+  <div class="insight">
+    <div class="insight-dot" style="background:#1D9E75"></div>
+    <p><strong>Bizum matters.</strong> Spain's dominant mobile payment (29M+ active users) is often underused by international OTTs — a likely conversion miss.</p>
+  </div>
+  <div class="insight">
+    <div class="insight-dot" style="background:#D85A30"></div>
+    <p><strong>Niche sports &gt; LaLiga.</strong> Padel and Liga F (women's football) offer passionate audiences at a fraction of the rights cost.</p>
+  </div>
+  <div class="insight">
+    <div class="insight-dot" style="background:#BA7517"></div>
+    <p><strong>Revenue-based funding obligation.</strong> Spain's 2022 LGCA imposes a revenue-based obligation to finance European audiovisual works — plan for it from day one.</p>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ── -->
+<div class="content-wrap">
+
+<div class="tabs" id="main-tabs">
+  <button class="tab active" onclick="showTab('overview',0)">Overview map</button>
+  <button class="tab" onclick="showTab('content',1)">Content strategy</button>
+  <button class="tab" onclick="showTab('market',2)">Market &amp; audience</button>
+  <button class="tab" onclick="showTab('competition',3)">Competition</button>
+  <button class="tab" onclick="showTab('tech',4)">Technology</button>
+  <button class="tab" onclick="showTab('monetisation',5)">Monetisation</button>
+  <button class="tab" onclick="showTab('regulation',6)">Regulation</button>
+</div>
+<div class="progress-bar"><div class="progress-fill" id="progress" style="width:14%"></div></div>
+
+<!-- ═══════════════════════════════════════════════════
+     TAB 1: OVERVIEW MAP
+═══════════════════════════════════════════════════ -->
+<div class="panel active" id="tab-overview">
+  <div class="map-wrap">
+    <svg viewBox="0 0 680 560" role="img">
+      <title>OTT Spain — overview concept map</title>
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+          <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+      </defs>
+      <!-- Connector lines -->
+      <line x1="340" y1="272" x2="340" y2="158" stroke="#7F77DD" stroke-width="1" opacity=".5" marker-end="url(#arrow)"/>
+      <line x1="340" y1="288" x2="340" y2="402" stroke="#1D9E75" stroke-width="1" opacity=".5" marker-end="url(#arrow)"/>
+      <line x1="270" y1="275" x2="172" y2="225" stroke="#D85A30" stroke-width="1" opacity=".5" marker-end="url(#arrow)"/>
+      <line x1="412" y1="275" x2="510" y2="225" stroke="#378ADD" stroke-width="1" opacity=".5" marker-end="url(#arrow)"/>
+      <line x1="285" y1="300" x2="148" y2="370" stroke="#D4537E" stroke-width="1" opacity=".5" marker-end="url(#arrow)"/>
+      <line x1="400" y1="300" x2="530" y2="370" stroke="#BA7517" stroke-width="1" opacity=".5" marker-end="url(#arrow)"/>
+      <!-- Sub-node lines -->
+      <line x1="255" y1="120" x2="208" y2="88" stroke="#AFA9EC" stroke-width="0.7" marker-end="url(#arrow)"/>
+      <line x1="425" y1="120" x2="484" y2="88" stroke="#AFA9EC" stroke-width="0.7" marker-end="url(#arrow)"/>
+      <line x1="270" y1="448" x2="208" y2="476" stroke="#9FE1CB" stroke-width="0.7" marker-end="url(#arrow)"/>
+      <line x1="415" y1="448" x2="478" y2="476" stroke="#9FE1CB" stroke-width="0.7" marker-end="url(#arrow)"/>
+
+      <!-- CENTER -->
+      <g class="node-group pulse" onclick="showTab('content'); setAllActive()">
+        <rect x="248" y="255" width="184" height="56" rx="12" fill="#534AB7" stroke="#3C3489" stroke-width="1"/>
+        <text x="340" y="276" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#EEEDFE" font-family="sans-serif">New OTT Platform</text>
+        <text x="340" y="296" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#AFA9EC" font-family="sans-serif">Spain market entry</text>
+      </g>
+      <!-- Content Strategy -->
+      <g class="node-group" onclick="showTab('content')">
+        <rect x="255" y="104" width="170" height="50" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+        <text x="340" y="123" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="#3C3489" font-family="sans-serif">Content strategy</text>
+        <text x="340" y="141" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#534AB7" font-family="sans-serif">Local vs. international</text>
+      </g>
+      <!-- Market -->
+      <g class="node-group" onclick="showTab('market')">
+        <rect x="252" y="402" width="176" height="50" rx="10" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.5"/>
+        <text x="340" y="421" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="#085041" font-family="sans-serif">Market &amp; audience</text>
+        <text x="340" y="439" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0F6E56" font-family="sans-serif">Segments &amp; demand</text>
+      </g>
+      <!-- Competition -->
+      <g class="node-group" onclick="showTab('competition')">
+        <rect x="68" y="196" width="160" height="50" rx="10" fill="#FAECE7" stroke="#D85A30" stroke-width="0.5"/>
+        <text x="148" y="215" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="#712B13" font-family="sans-serif">Competition</text>
+        <text x="148" y="233" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#993C1D" font-family="sans-serif">Netflix, Movistar+…</text>
+      </g>
+      <!-- Technology -->
+      <g class="node-group" onclick="showTab('tech')">
+        <rect x="450" y="196" width="160" height="50" rx="10" fill="#E6F1FB" stroke="#378ADD" stroke-width="0.5"/>
+        <text x="530" y="215" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="#0C447C" font-family="sans-serif">Technology</text>
+        <text x="530" y="233" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5" font-family="sans-serif">Streaming infra &amp; UX</text>
+      </g>
+      <!-- Monetisation -->
+      <g class="node-group" onclick="showTab('monetisation')">
+        <rect x="58" y="344" width="160" height="50" rx="10" fill="#FBEAF0" stroke="#D4537E" stroke-width="0.5"/>
+        <text x="138" y="363" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="#72243E" font-family="sans-serif">Monetisation</text>
+        <text x="138" y="381" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#993556" font-family="sans-serif">SVOD, AVOD, bundles</text>
+      </g>
+      <!-- Regulation -->
+      <g class="node-group" onclick="showTab('regulation')">
+        <rect x="462" y="344" width="168" height="50" rx="10" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/>
+        <text x="546" y="363" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="#633806" font-family="sans-serif">Regulation &amp; rights</text>
+        <text x="546" y="381" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#854F0B" font-family="sans-serif">EU quota, licensing</text>
+      </g>
+      <!-- Sub: Spanish originals -->
+      <g class="node-group" onclick="showTab('content')">
+        <rect x="80" y="64" width="128" height="34" rx="7" fill="#EEEDFE" stroke="#AFA9EC" stroke-width="0.5"/>
+        <text x="144" y="81" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#3C3489" font-family="sans-serif">Spanish originals</text>
+      </g>
+      <!-- Sub: Sports rights -->
+      <g class="node-group" onclick="showTab('content')">
+        <rect x="470" y="64" width="140" height="34" rx="7" fill="#EEEDFE" stroke="#AFA9EC" stroke-width="0.5"/>
+        <text x="540" y="81" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#3C3489" font-family="sans-serif">Sports &amp; LaLiga rights</text>
+      </g>
+      <!-- Sub: Youth -->
+      <g class="node-group" onclick="showTab('market')">
+        <rect x="80" y="468" width="128" height="34" rx="7" fill="#E1F5EE" stroke="#9FE1CB" stroke-width="0.5"/>
+        <text x="144" y="485" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#085041" font-family="sans-serif">Youth &amp; mobile-first</text>
+      </g>
+      <!-- Sub: Regional -->
+      <g class="node-group" onclick="showTab('market')">
+        <rect x="470" y="468" width="140" height="34" rx="7" fill="#E1F5EE" stroke="#9FE1CB" stroke-width="0.5"/>
+        <text x="540" y="485" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#085041" font-family="sans-serif">Regional languages</text>
+      </g>
+      <text x="340" y="545" text-anchor="middle" font-size="11" fill="#888780" font-family="sans-serif">Click any node to open the detailed tab</text>
+    </svg>
+  </div>
+
+  <div class="legend">
+    <div class="leg"><div class="dot" style="background:#534AB7"></div>Core concept</div>
+    <div class="leg"><div class="dot" style="background:#D85A30"></div>Competition</div>
+    <div class="leg"><div class="dot" style="background:#378ADD"></div>Technology</div>
+    <div class="leg"><div class="dot" style="background:#1D9E75"></div>Market</div>
+    <div class="leg"><div class="dot" style="background:#D4537E"></div>Monetisation</div>
+    <div class="leg"><div class="dot" style="background:#BA7517"></div>Regulation</div>
+  </div>
+
+  <div class="info-box">
+    <strong>How to use this file:</strong> Use the tabs above to navigate each strategic dimension. The overview map shows how they connect — click any node to jump to that section. All content works offline.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TAB 2: CONTENT STRATEGY
+═══════════════════════════════════════════════════ -->
+<div class="panel" id="tab-content">
+  <div class="detail-grid">
+    <div class="card">
+      <h3>Content is the #1 retention driver</h3>
+      <p>Content quality and relevance drive subscribe, stay, and churn decisions more than price or UX. A new OTT must define its content identity before anything else.</p>
+    </div>
+    <div class="card">
+      <h3>Strategic positioning options</h3>
+      <ul>
+        <li><strong>Local-first:</strong> Spanish &amp; regional originals — one of the clearest gaps in the market</li>
+        <li><strong>Genre specialist:</strong> crime, horror, kids, docs</li>
+        <li><strong>Live sport add-on:</strong> niche sports + women's football</li>
+        <li><strong>Aggregator:</strong> licensed international catalogue</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="detail-grid">
+    <div class="card">
+      <h3>Spanish originals <span class="badge" style="background:#EEEDFE;color:#3C3489;">High priority</span></h3>
+      <div class="label">Proven genres in Spain</div>
+      <span class="tag key">Crime &amp; thriller</span>
+      <span class="tag key">Romantic comedy</span>
+      <span class="tag key">Historical drama</span>
+      <span class="tag key">Horror</span>
+      <span class="tag key">True crime docs</span>
+      <p style="margin-top:10px;">Co-produce with regional broadcasters (TV3, ETB, TVG) to reduce cost and earn cultural credibility. Regional language content (Catalan, Basque, Galician) unlocks underserved audiences and may attract public subsidies.</p>
+    </div>
+    <div class="card">
+      <h3>Sports rights</h3>
+      <div class="label">Affordable entry points</div>
+      <span class="tag rec">Padel (fast-growing in Spain)</span>
+      <span class="tag rec">Liga F (women's football)</span>
+      <span class="tag rec">Motorsport</span>
+      <span class="tag warn">LaLiga (very expensive)</span>
+      <p style="margin-top:10px;">LaLiga rights are shared between DAZN and Movistar+ under a costly rights structure. Niche sports with passionate fanbases (padel, esports, cycling) can offer better cost-per-subscriber for a new entrant.</p>
+    </div>
+    <div class="card">
+      <h3>International catalogue</h3>
+      <p>License proven international content to fill catalogue depth while originals ramp up. Prioritise content with Spanish dubbing/subtitles already available. Latin American content performs well — familiar language, lower licensing costs than US studio content.</p>
+    </div>
+    <div class="card">
+      <h3>Content budget guidance</h3>
+      <div class="label">Rough cost ranges</div>
+      <ul>
+        <li>Spanish drama series (8 ep): €2–5M</li>
+        <li>Co-production with regional TV: €0.8–2M</li>
+        <li>Licensed international title: €20–200k/yr</li>
+        <li>Documentary: €200–600k</li>
+        <li>Live sport (niche): €100–500k/yr</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TAB 3: MARKET & AUDIENCE
+═══════════════════════════════════════════════════ -->
+<div class="panel" id="tab-market">
+  <div class="detail-grid">
+    <div class="card">
+      <h3>Market fundamentals</h3>
+      <ul>
+        <li>Population: ~49M</li>
+        <li>Broadband penetration: ~90%</li>
+        <li>SVoD household penetration: ~60%</li>
+        <li>Multi-platform fatigue rising — churn is high</li>
+        <li>Strong mobile consumption, especially under-35</li>
+        <li>~70% of OTT viewing on TV screens</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Core target segments</h3>
+      <div class="label">Primary</div>
+      <span class="tag key">18–45 urban, smartphone-native</span>
+      <div class="label" style="margin-top:8px;">Underserved opportunities</div>
+      <span class="tag rec">55+ (ignored by current players)</span>
+      <span class="tag rec">Regional language speakers</span>
+      <span class="tag rec">Gen Z cord-nevers</span>
+    </div>
+  </div>
+
+  <div class="detail-grid">
+    <div class="card">
+      <h3>Youth &amp; mobile-first (18–30)</h3>
+      <p>Consume primarily on mobile. Expect short-form content, social sharing, offline downloads, and low price points. Freemium mobile-only tier (AVOD) works as an acquisition funnel. Real competitors for attention: TikTok and YouTube — think about what you uniquely offer.</p>
+      <div style="margin-top:10px;">
+        <span class="tag">Short-form content</span>
+        <span class="tag">AVOD entry tier</span>
+        <span class="tag">Social features</span>
+        <span class="tag">Offline downloads</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Regional language audiences</h3>
+      <p>Catalonia, Basque Country, and Galicia each have publicly funded regional broadcasters and loyal local audiences. A new OTT with strong Catalan or Basque originals could win institutional support, subsidies, and a base that larger platforms often under-serve.</p>
+      <div style="margin-top:10px;">
+        <span class="tag rec">~10M Catalan speakers</span>
+        <span class="tag rec">~750k Basque speakers</span>
+        <span class="tag rec">~3M Galician speakers</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Older audiences (55+)</h3>
+      <p>Significantly underserved by current streaming platforms. Strong appetite for Spanish drama, historical content, and dubbed international films. Price-sensitive but loyal once subscribed. Prefer TV screen experience. Worth a dedicated content lane and simplified UX.</p>
+    </div>
+    <div class="card">
+      <h3>Key behavioural insights</h3>
+      <ul>
+        <li>Binge-watching peaks Thu–Sun evenings</li>
+        <li>Summer drops off — offer flexible pause/freeze</li>
+        <li>High account sharing (especially 18–28 cohort)</li>
+        <li>Spanish dubbing is often preferred over subtitles by mainstream audiences</li>
+        <li>Strong word-of-mouth for local drama hits</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TAB 4: COMPETITION
+═══════════════════════════════════════════════════ -->
+<div class="panel" id="tab-competition">
+
+  <!-- MEDIASET INFINITY — featured card -->
+  <div class="card" style="border: 2px solid #534AB7; margin-bottom: 12px;">
+    <h3>
+      Mediaset Infinity
+      <span class="badge" style="background:#EEEDFE;color:#3C3489;">Local AVOD leader</span>
+      <span class="badge" style="background:#E1F5EE;color:#085041;">Relaunched June 2025</span>
+    </h3>
+    <div class="label">Who they are</div>
+    <p>The digital streaming arm of Mediaset España — owner of Telecinco, Cuatro, and associated channels. Formerly known as Mitele (launched 2011), it rebranded as <strong>Mediaset Infinity</strong> on 24 June 2025, adopting the brand and technology architecture of its Italian parent MFE-MediaForEurope. The platform is free and AVOD-first, with a paid tier called <strong>Infinity+</strong> (formerly MitelePlus) for ad-free viewing, offline downloads, and broader catalogue access.</p>
+    <div class="label" style="margin-top:10px;">Strengths</div>
+    <ul>
+      <li>Deep catalogue of mass-market Spanish content: Gran Hermano, La Isla de las Tentaciones, Supervivientes, La que se avecina, First Dates — titles with proven, loyal audiences</li>
+      <li>Free-to-air brand recognition from Telecinco and Cuatro — massive built-in awareness</li>
+      <li>New-generation technology stack co-developed with Mediaset Italia over 18+ months — modern recommendation engine, personalised UX, scalable architecture</li>
+      <li>Ad Infinity: a sophisticated programmatic ad suite (AI-driven ad load control, pause ads, Smart TV formats) — strong monetisation potential for the AVOD model</li>
+      <li>Exclusive digital content and originals created for the platform — not just catch-up TV</li>
+      <li>International offer via Infinity+ Internacional for the Spanish diaspora</li>
+    </ul>
+    <div class="label" style="margin-top:10px;">Weaknesses / gaps</div>
+    <ul>
+      <li>Brand historically associated with mass-market entertainment — may struggle to attract premium or younger quality-seeking subscribers</li>
+      <li>Infinity+ paid tier remains smaller than Atresplayer, which reported 700k+ subscribers in H1 2025</li>
+      <li>Limited regional language (Catalan, Basque, Galician) content investment</li>
+      <li>No live sports rights — a gap vs Movistar+ and DAZN</li>
+    </ul>
+    <div class="label" style="margin-top:10px;">Strategic direction (2025+)</div>
+    <p>Fully committed to the AVOD + SVOD hybrid model. Expanding original digital productions, video podcast formats, short-form vertical video, and AI-powered personalisation. The shared MFE architecture may give it a technology edge over some legacy local competitors.</p>
+    <div style="margin-top:10px;">
+      <span class="tag key">AVOD-first</span>
+      <span class="tag key">Mass entertainment</span>
+      <span class="tag key">MFE tech stack</span>
+      <span class="tag rec">Strong ad monetisation</span>
+      <span class="tag warn">Gap: premium originals</span>
+      <span class="tag warn">Gap: regional languages</span>
+    </div>
+  </div>
+
+  <div class="detail-grid">
+    <div class="card">
+      <h3>AtresPlayer <span class="badge" style="background:#E6F1FB;color:#0C447C;">Local SVOD challenger</span></h3>
+      <div class="label">Who they are</div>
+      <p>The streaming platform of Atresmedia (Antena 3, La Sexta). Free catch-up since 2013; paid Premium tier launched 2019. Closed H1 2025 with <strong>700k+ subscribers</strong>, confirming it as Spain's clearest local premium streaming success story.</p>
+      <div class="label" style="margin-top:8px;">Strengths</div>
+      <ul>
+        <li>Clearest local SVOD success story in Spain — steady subscriber growth</li>
+        <li>Original fiction-first strategy: leads Spanish series launches (FoQ revival, Mar Afuera, Drag Race Spain)</li>
+        <li>Strong content partnerships: Disney+ bundle integration; ViX (TelevisaUnivision) launched on platform Jan 2025 — adds 15,000h of Latin content</li>
+        <li>Growing international presence (LatAm, US Hispanic via Amazon Channels, YouTube TV)</li>
+      </ul>
+      <div class="label" style="margin-top:8px;">Weaknesses</div>
+      <ul>
+        <li>Still relatively small at 700k+ subs — well below Netflix/Disney scale</li>
+        <li>Dependent on Antena 3 brand equity — weaker with younger, digital-native users</li>
+        <li>No significant sports rights</li>
+      </ul>
+      <div style="margin-top:10px;">
+        <span class="tag key">700k+ subscribers (H1 2025)</span>
+        <span class="tag key">SVOD originals-led</span>
+        <span class="tag rec">ViX partnership (LatAm content)</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Netflix <span class="badge" style="background:#FCEBEB;color:#791F1F;">Global leader</span></h3>
+      <p>Strong brand, large catalogue, global originals, recommendation engine. Price sensitivity is a risk in Spain, especially after price increases. Limited investment in Spain's regional-language content. No meaningful live sports offer in Spain.</p>
+    </div>
+
+    <div class="card">
+      <h3>Movistar+ <span class="badge" style="background:#FAEEDA;color:#633806;">Telco bundle</span></h3>
+      <p>LaLiga + Champions League rights, Spanish originals, and strong Telefónica distribution. Major bundle advantage, but still a premium-priced offer with a more complex legacy UX than pure-play OTT rivals.</p>
+    </div>
+
+    <div class="card">
+      <h3>DAZN</h3>
+      <p>Sports-focused. Partial LaLiga rights, boxing, motorsport. Retention can be challenging outside die-hard sports fans. Limited non-sports content. Potential licensing or partnership angle.</p>
+    </div>
+
+    <div class="card">
+      <h3>Max &amp; Disney+</h3>
+      <p>Strong US studio content and franchises. Limited Spanish originals investment. Disney+ has family lock-in; Max has prestige drama. Both vulnerable to churn when hit series end.</p>
+    </div>
+
+    <div class="card">
+      <h3>RTVE Play (free)</h3>
+      <p>Public broadcaster platform with a large Spanish archive, news, and some regional-language content. Not a direct paid competitor but relevant as a strong free Spanish content benchmark.</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:12px;">
+    <h3>The real gap — your opportunity</h3>
+    <div class="label">What is still missing in Spain</div>
+    <p>Mediaset Infinity leads in mass-market AVOD. Atresplayer is the clearest local SVOD success story but remains modest in scale. There is still room in <strong>regional language content</strong>, <strong>niche sports</strong> (padel, Liga F), and the <strong>55+ audience</strong>. A premium local streaming position — one that feels authentically Spanish across regions, not just Madrid — is still contestable.</p>
+    <div style="margin-top:10px;">
+      <span class="tag rec">Regional languages still underserved</span>
+      <span class="tag rec">Niche sports (padel, Liga F, cycling)</span>
+      <span class="tag rec">55+ audience ignored by all players</span>
+      <span class="tag rec">Premium local originals gap</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TAB 5: TECHNOLOGY
+═══════════════════════════════════════════════════ -->
+<div class="panel" id="tab-tech">
+
+  <div class="section-label">User-facing layer</div>
+
+  <div class="stack-layer">
+    <div class="stack-header" onclick="toggleStack(this)">
+      <div class="dot" style="background:#378ADD;width:10px;height:10px;border-radius:50%;flex-shrink:0"></div>
+      <h3>Client apps</h3>
+      <span class="sub">Web · iOS · Android · Smart TV</span>
+    </div>
+    <div class="stack-body">
+      <p>TV screens account for a large share of OTT viewing in Spain. Prioritise <strong>Smart TV + web + Android</strong> for launch; iOS next.</p>
+      <div class="chips">
+        <span class="chip hl">React / Next.js (web)</span>
+        <span class="chip hl">Smart TV (Tizen, webOS, Android TV)</span>
+        <span class="chip">React Native (iOS + Android)</span>
+        <span class="chip">Apple TV / Fire TV</span>
+        <span class="chip">Offline downloads (DRM-protected)</span>
+        <span class="chip">EU Accessibility Act compliance</span>
+      </div>
+      <p style="margin-top:10px;"><span class="tag rec">Recommendation: launch web + Smart TV + Android simultaneously</span></p>
+    </div>
+  </div>
+
+  <div class="stack-layer">
+    <div class="stack-header" onclick="toggleStack(this)">
+      <div class="dot" style="background:#378ADD;width:10px;height:10px;border-radius:50%;flex-shrink:0"></div>
+      <h3>Video player</h3>
+      <span class="sub">Playback · DRM · ABR</span>
+    </div>
+    <div class="stack-body">
+      <p>The player is your most critical piece of engineering. A buffering spinner or DRM failure loses a subscriber permanently.</p>
+      <div class="chips">
+        <span class="chip hl">Shaka Player (DASH/Widevine)</span>
+        <span class="chip hl">hls.js (iOS/Safari)</span>
+        <span class="chip hl">EZDRM multi-DRM SaaS</span>
+        <span class="chip">Widevine + FairPlay + PlayReady</span>
+        <span class="chip">AV1 codec (material compression gains, device support permitting)</span>
+        <span class="chip">Low-latency live (&lt;3s LL-DASH)</span>
+      </div>
+      <p style="margin-top:10px;"><span class="tag rec">Recommendation: Shaka Player + EZDRM multi-DRM SaaS</span></p>
+    </div>
+  </div>
+
+  <div class="section-label">Delivery layer</div>
+
+  <div class="stack-layer">
+    <div class="stack-header" onclick="toggleStack(this)">
+      <div class="dot" style="background:#1D9E75;width:10px;height:10px;border-radius:50%;flex-shrink:0"></div>
+      <h3>CDN &amp; video delivery</h3>
+      <span class="sub">Latency · scale · cost</span>
+    </div>
+    <div class="stack-body">
+      <p>CDN cost is one of the biggest infrastructure expenses at scale. Cloudflare has strong PoPs in Madrid and Barcelona — attractive for a startup. Multi-CDN or premium CDN options such as Akamai become more relevant as scale and reliability requirements grow.</p>
+      <div class="chips">
+        <span class="chip hl">Cloudflare Stream + Workers</span>
+        <span class="chip">Akamai (at scale)</span>
+        <span class="chip">AWS CloudFront + MediaPackage</span>
+        <span class="chip">Multi-CDN failover (scale)</span>
+      </div>
+      <p style="margin-top:10px;"><span class="tag rec">Recommendation: start with Cloudflare Stream, add origin shield</span></p>
+    </div>
+  </div>
+
+  <div class="stack-layer">
+    <div class="stack-header" onclick="toggleStack(this)">
+      <div class="dot" style="background:#1D9E75;width:10px;height:10px;border-radius:50%;flex-shrink:0"></div>
+      <h3>Transcoding &amp; encoding</h3>
+      <span class="sub">VOD · live · quality ladders</span>
+    </div>
+    <div class="stack-body">
+      <p>Target at least 5 quality levels: 240p, 480p, 720p, 1080p, 4K. Store source files permanently. Consider HDR (HDR10) for premium 4K content where the device base justifies it.</p>
+      <div class="chips">
+        <span class="chip hl">Mux (fastest to market)</span>
+        <span class="chip hl">AWS MediaConvert (cheaper at scale)</span>
+        <span class="chip">FFmpeg self-hosted</span>
+        <span class="chip">Per-title encoding (QVBR)</span>
+      </div>
+      <p style="margin-top:10px;"><span class="tag rec">Recommendation: Mux for speed to market, MediaConvert to scale</span></p>
+    </div>
+  </div>
+
+  <div class="section-label">Backend layer</div>
+
+  <div class="stack-layer">
+    <div class="stack-header" onclick="toggleStack(this)">
+      <div class="dot" style="background:#D85A30;width:10px;height:10px;border-radius:50%;flex-shrink:0"></div>
+      <h3>Backend services</h3>
+      <span class="sub">API · auth · catalogue · billing</span>
+    </div>
+    <div class="stack-body">
+      <p>Two Spain-specific priorities: <strong>Bizum integration</strong> (29M+ active users; omitting it may hurt conversion) and <strong>concurrent stream limits</strong> enforced via Redis (to reduce account-sharing leakage).</p>
+      <div class="chips">
+        <span class="chip hl">GraphQL API gateway</span>
+        <span class="chip hl">Auth0 / Cognito (never build your own)</span>
+        <span class="chip hl">Stripe + Bizum (via Redsys)</span>
+        <span class="chip">Contentful / Sanity (headless CMS)</span>
+        <span class="chip">Redis (session / stream concurrency)</span>
+        <span class="chip">Catalogue rights service</span>
+      </div>
+      <p style="margin-top:10px;"><span class="tag rec">Recommendation: GraphQL + Auth0 + Stripe/Redsys with Bizum</span></p>
+    </div>
+  </div>
+
+  <div class="stack-layer">
+    <div class="stack-header" onclick="toggleStack(this)">
+      <div class="dot" style="background:#D85A30;width:10px;height:10px;border-radius:50%;flex-shrink:0"></div>
+      <h3>Data &amp; personalisation</h3>
+      <span class="sub">Recommendations · analytics · ML</span>
+    </div>
+    <div class="stack-body">
+      <p>Personalisation can become a moat that catalogue size alone cannot buy. Thumbnail A/B testing is often high-ROI, and the right artwork can materially improve click-through.</p>
+      <div class="chips">
+        <span class="chip hl">AWS Personalize (recommendation ML)</span>
+        <span class="chip hl">Typesense / Elasticsearch (search)</span>
+        <span class="chip">Segment (event bus)</span>
+        <span class="chip">BigQuery / Redshift (warehouse)</span>
+        <span class="chip">GrowthBook (A/B testing)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">Infrastructure layer</div>
+
+  <div class="stack-layer">
+    <div class="stack-header" onclick="toggleStack(this)">
+      <div class="dot" style="background:#534AB7;width:10px;height:10px;border-radius:50%;flex-shrink:0"></div>
+      <h3>Cloud infrastructure</h3>
+      <span class="sub">Hosting · DB · ops</span>
+    </div>
+    <div class="stack-body">
+      <p>AWS opened the <strong>eu-south-2 (Spain/Aragón) region</strong> in late 2022. It can be a strong option for local data residency and latency, but GDPR compliance depends on governance and processing controls as much as region choice. Start with 3–5 services max, not 30.</p>
+      <div class="chips">
+        <span class="chip hl">AWS eu-south-2 (Spain data residency)</span>
+        <span class="chip hl">PostgreSQL (RDS/Aurora) + Redis</span>
+        <span class="chip hl">Terraform + GitHub Actions (IaC + CI/CD)</span>
+        <span class="chip">Kubernetes EKS</span>
+      </div>
+      <p style="margin-top:10px;"><span class="tag rec">Recommendation: AWS eu-south-2 for data + EKS + Terraform from day one</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TAB 6: MONETISATION
+═══════════════════════════════════════════════════ -->
+<div class="panel" id="tab-monetisation">
+  <div class="detail-grid">
+    <div class="card">
+      <h3>SVOD (subscription)</h3>
+      <p>Monthly or annual recurring subscription. Predictable revenue, highest LTV. Spain's market is price-sensitive — keep base tier under €8/month. Annual plans reduce churn significantly (offer 2 months free).</p>
+      <div style="margin-top:10px;">
+        <span class="tag">Basic: €5–7/mo (ad-supported)</span>
+        <span class="tag">Standard: €9–11/mo (ad-free)</span>
+        <span class="tag">Premium: €13–15/mo (4K, 4 screens)</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>AVOD (ad-supported free)</h3>
+      <p>Free tier with ads. Excellent for youth acquisition and top-of-funnel growth. To attract advertisers at meaningful scale, strong reach and targeting capability matter. Ads must be managed carefully — intrusive pre-rolls hurt retention.</p>
+      <div style="margin-top:10px;">
+        <span class="tag rec">Best for: under-25 acquisition</span>
+        <span class="tag rec">Spanish CPMs: €5–15</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>TVOD (pay-per-view)</h3>
+      <p>Pay per title or per live event. Strong for premium live sport moments (boxing, F1 races) and day-and-date film releases. Not a primary revenue model but useful as a revenue booster for tent-pole events.</p>
+    </div>
+    <div class="card">
+      <h3>Telco bundle</h3>
+      <p>Partner with a Spanish telco (Vodafone, Movistar, MasOrange) to bundle your service with broadband or mobile plans. One of the fastest subscriber-acquisition routes. Telcos get content differentiation; you get distribution and reduced churn. Negotiate carefully — telcos may want exclusivity periods.</p>
+      <div style="margin-top:10px;">
+        <span class="tag rec">Vodafone ES</span>
+        <span class="tag rec">Orange Spain</span>
+        <span class="tag rec">MásMóvil / Yoigo</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Hybrid SVOD + AVOD tier</h3>
+      <p>Now the market standard (Netflix, Disney+, Max all offer ad-supported tiers). Maximises total addressable market — price-sensitive users get AVOD, quality-seekers pay for ad-free. Build AVOD capability from the start even if you don't launch it on day one.</p>
+      <span class="tag rec">Recommended model for Spain launch</span>
+    </div>
+    <div class="card">
+      <h3>Churn reduction tactics</h3>
+      <ul>
+        <li>Annual plan discount (2 months free)</li>
+        <li>Summer pause option (keep subscriber, pause billing)</li>
+        <li>Win-back campaigns at cancellation</li>
+        <li>Student pricing (€3–4/mo) for 18–25 cohort</li>
+        <li>Family plan (up to 5 profiles, one bill)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TAB 7: REGULATION
+═══════════════════════════════════════════════════ -->
+<div class="panel" id="tab-regulation">
+  <div class="detail-grid">
+    <div class="card">
+      <h3>EU AVMSD (Audiovisual Media Services Directive)</h3>
+      <div class="label">EU-wide obligation</div>
+      <p>Requires at least <strong>30% European works</strong> in on-demand catalogues. Applies to OTT services operating in or targeting EU member states. Those works must also be prominently offered — meaning visible and discoverable, not buried.</p>
+      <span class="tag warn">Non-compliance: infringement proceedings</span>
+    </div>
+    <div class="card">
+      <h3>Spanish Ley General de Comunicación Audiovisual (2022)</h3>
+      <div class="label">Spain-specific</div>
+      <ul>
+        <li><strong>Spain-specific language obligations</strong> apply on top of the EU quota; part of the required European works reserve must be available in one of Spain's official languages</li>
+        <li><strong>Revenue-based obligation</strong> to finance European audiovisual works, which may be met through direct investment, rights acquisition, and/or contributions to approved funds</li>
+        <li>Additional obligations may apply depending on service type, turnover, and how the service is established or targets Spain</li>
+        <li>Content rating and parental controls mandatory</li>
+      </ul>
+      <span class="tag warn">Engage a Spanish media law firm early</span>
+    </div>
+    <div class="card">
+      <h3>GDPR + Spanish LOPDGDD</h3>
+      <div class="label">Data protection</div>
+      <ul>
+        <li>Explicit consent for data collection and profiling</li>
+        <li>Right to erasure, portability, access</li>
+        <li>Data residency: keep user data within the EU where appropriate, alongside proper contractual, security, and governance controls</li>
+        <li>Cookie consent banner required (AEPD guidelines)</li>
+        <li>DPO (Data Protection Officer) required if large-scale profiling</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Content licensing &amp; rights</h3>
+      <div class="label">Territory-by-territory clearance</div>
+      <ul>
+        <li>Rights must be cleared territory by territory; Spain may be licensed alone or together with other territories depending on the deal</li>
+        <li>Music rights: SGAE (Spanish) + CISAC network for international content</li>
+        <li>Subtitling/dubbing rights must be explicit in content contracts</li>
+        <li>Windowing rules depend on release strategy, financing, and rights agreements; Spanish and EU rules can affect the theatrical-to-streaming timeline</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>EU Accessibility Act (EAA) — 2025</h3>
+      <p>Became applicable from June 2025. Requires digital services, including relevant streaming experiences, to address accessibility through measures such as captions, audio description, screen reader compatibility, and accessible player controls where applicable. Build this in from day one — retrofitting is expensive.</p>
+      <span class="tag warn">Applicable from June 2025</span>
+    </div>
+    <div class="card">
+      <h3>Anti-piracy obligations</h3>
+      <ul>
+        <li>Implement DRM on all content (Widevine + FairPlay + PlayReady)</li>
+        <li>Token-authenticated CDN URLs — prevent hotlinking</li>
+        <li>Maintain appropriate privacy, security, and notice-handling processes alongside anti-piracy operations</li>
+        <li>Work with rights holders, industry bodies, and legal counsel on notice-and-enforcement processes appropriate to Spain</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div><!-- end content-wrap -->
+
+<div class="footer">
+  <div class="footer-title">Launching an OTT platform in Spain — a 6-dimension strategy framework</div>
+  <p>Built as an interactive study guide. Share it with anyone exploring the Spanish streaming market.</p>
+  <div class="hashtags">
+    <span class="hashtag">#OTT</span>
+    <span class="hashtag">#StreamingStrategy</span>
+    <span class="hashtag">#SpainMedia</span>
+    <span class="hashtag">#MediaTech</span>
+    <span class="hashtag">#ContentStrategy</span>
+    <span class="hashtag">#StartupSpain</span>
+  </div>
+  <br>
+  <button class="share-cta" onclick="copyLink()">Copy link to share</button>
+  <p style="margin-top:12px;font-size:11px;color:#6b69a0;">All figures indicative · Reviewed and updated April 2026</p>
+</div>
+
+<script>
+const TAB_ORDER = ['overview','content','market','competition','tech','monetisation','regulation'];
+
+function showTab(id, idx) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  if (idx === undefined) idx = TAB_ORDER.indexOf(id);
+  if (idx >= 0) document.querySelectorAll('.tab')[idx].classList.add('active');
+  const pct = Math.round(((idx + 1) / TAB_ORDER.length) * 100);
+  document.getElementById('progress').style.width = pct + '%';
+  window.scrollTo({ top: document.querySelector('.content-wrap').offsetTop - 16, behavior: 'smooth' });
+}
+
+function toggleStack(header) {
+  const body = header.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+function copyLink() {
+  const url = window.location.href;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(url).then(() => alert('Link copied! Paste it in your LinkedIn post.'));
+  } else {
+    prompt('Copy this link:', url);
+  }
+}
+
+document.querySelectorAll('.stack-body').forEach(b => b.classList.add('open'));
+</script>
+</body>
+</html>
